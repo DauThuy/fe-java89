@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CNN</title>
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<header class="page-header">
+		<div class="wrapper">
+			<div class="header-left">
+				<div class="page-logo">
+					<a href="#">
+						<img src="img/logo_cnn.png" alt="">
+					</a>
+				</div>
+
+				<nav class="page-nav">
+					<ul>
+						<!-- (li>a{Item $})*11 -->
+						<li><a href="">Regions</a></li>
+						<li><a href="">U.S. Politics</a></li>
+						<li><a href="">Money</a></li>
+						<li><a href="">Entertainment</a></li>
+						<li><a href="">Tech</a></li>
+						<li><a href="">Sport</a></li>
+						<li><a href="">Travel</a></li>
+						<li><a href="">Style</a></li>
+						<li><a href="">Health</a></li>
+						<li><a href="">Video</a></li>
+						<li><a href="">VR</a></li>	
+					</ul>
+				</nav>
+			</div>
+
+			<div class="header-right">
+				<div class="international">
+					<input type="checkbox" id="international-switcher" hidden>
+					<label for="international-switcher"> Edition <i class="fas fa-chevron-down"></i></label>
+			
+					<div class="international-block">
+						<ul>
+							<li>U.S</li>
+							<li>Arabic</li>
+							<li>Espanol</li>
+						</ul>
+						<hr>
+						<p>Set edition preference</p>
+						<div>
+							<input type="radio" id="us-id" name="gr-edition">
+							<label for="us-id">U.S.</label>
+
+							<input type="radio" id="inter-id" name="gr-edition" checked>
+							<label for="inter-id">International</label>
+						</div>
+
+						<div>
+							<button class="confirm">Confirm</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="page-search">
+					<input type="checkbox" id="search-switcher" hidden>
+					<input type="search" id="page-search-field" placeholder="Search CNN...">
+					
+					<label for="page-search-field" class="page-search-label">Search <i class="fas fa-arrow-right"></i></label>
+					<label for="search-switcher"><i class="fas fa-search"></i></label>
+				</div>
+				
+				<div class="page-expanded-menu">
+					<input type="checkbox" id="expanded-menu-switcher" hidden>
+					<label for="expanded-menu-switcher"><i class="fas fa-bars"></i></label>
+					
+					<div class="expanded-menu-block">
+						 <div class="wrapper">
+							<div class="expanded-menu-block-top">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Regions</h3>
+												<ul>
+													<li><a href="">U.S.</a></li>
+													<li><a href="">Africa</a></li>
+													<li><a href="">Americas</a></li>
+													<li><a href="">Asia</a></li>
+													<li><a href="">China</a></li>
+													<li><a href="">Europe</a></li>
+													<li><a href="">Middle East</a></li>
+													<li><a href="">Opinion</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>U.S. Politics</h3>
+												<ul>
+													<li><a href="">45</a></li>
+													<li><a href="">Congress</a></li>
+													<li><a href="">Security</a></li>
+													<li><a href="">The Nine</a></li>
+													<li><a href="">Trumpmerica</a></li>
+													<li><a href="">State</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Money</h3>
+												<ul>
+													<li><a href="">Business</a></li>
+													<li><a href="">Markets</a></li>
+													<li><a href="">Tech</a></li>
+													<li><a href="">Luxury</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>entertainment</h3>
+												<ul>
+													<li><a href="">Stars</a></li>
+													<li><a href="">Screen</a></li>
+													<li><a href="">Binge</a></li>
+													<li><a href="">Culture</a></li>
+													<li><a href="">Media</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>tech</h3>
+												<ul>
+													<li><a href="">Business</a></li>
+													<li><a href="">Culture</a></li>
+													<li><a href="">Gadgets</a></li>
+													<li><a href="">Future</a></li>
+													<li><a href="">Startups</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Sport</h3>
+												<ul>
+													<li><a href="">Football</a></li>
+													<li><a href="">Golf</a></li>
+													<li><a href="">Tennis</a></li>
+													<li><a href="">Motorsport</a></li>
+													<li><a href="">Horseracing</a></li>
+													<li><a href="">Equestrian</a></li>
+													<li><a href="">Sailing</a></li>
+													<li><a href="">Skiing</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Travel</h3>
+												<ul>
+													<li><a href="">Aviation</a></li>
+													<li><a href="">Business Traveller</a></li>
+													<li><a href="">Destinations</a></li>
+													<li><a href="">Features</a></li>
+													<li><a href="">Food/Drink</a></li>
+													<li><a href="">Hotels</a></li>
+													<li><a href="">Partner Hotels</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>STYLE</h3>
+												<ul>
+													<li><a href="">Fashion</a></li>
+													<li><a href="">Design</a></li>
+													<li><a href="">Architecture</a></li>
+													<li><a href="">Arts</a></li>
+													<li><a href="">Autos</a></li>
+													<li><a href="">Luxury</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Health</h3>
+												<ul>
+													<li><a href="">Diet + Fitness</a></li>
+													<li><a href="">Living Well</a></li>
+													<li><a href="">Parenting + Family</a></li>
+													<li><a href="">Vital Signs</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Features</h3>
+												<ul>
+													<li><a href="">Freedom Project</a></li>
+													<li><a href="">Impact Your World</a></li>
+													<li><a href="">Inside Africa</a></li>
+													<li><a href="">2 degrees</a></li>
+													<li><a href="">All Features</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Video</h3>
+												<ul>
+													<li><a href="">Video news</a></li>
+													<li><a href="">Feature shows</a></li>
+													<li><a href="">HLN</a></li>
+													<li><a href="">TV shows</a></li>
+													<li><a href="">TV schedule</a></li>
+													<li><a href="">Faces of CNN Worldwide</a></li>
+													<li><a href="">CNNVR</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="expanded-col">
+												<h3>Sport</h3>
+												<ul>
+													<li><a href="">Football</a></li>
+													<li><a href="">Golf</a></li>
+													<li><a href="">Tennis</a></li>
+													<li><a href="">Motorsport</a></li>
+													<li><a href="">Horseracing</a></li>
+													<li><a href="">Equestrian</a></li>
+													<li><a href="">Sailing</a></li>
+													<li><a href="">Skiing</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="expanded-menu-block-bottom">
+								<div class="international-block">
+									<ul>
+										<li><img src="img/logo-us.png">U.S</li>
+										<li><img src="img/logo-ar.png">Arabic</li>
+										<li><img src="img/logo-esp.png">Espanol</li>
+									</ul>
+									<p>Set edition preference</p>
+									<div>
+										<input type="radio" id="us-id" name="gr-edition">
+										<label for="us-id">U.S.</label>
+			
+										<input type="radio" id="inter-id" name="gr-edition" checked>
+										<label for="inter-id">International</label>
+									</div>
+			
+									<div>
+										<button class="confirm">Confirm</button>
+									</div>
+								</div>
+							 </div>
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<div class="container-fluid">
+				<!-- ROW 1 -->
+				<section class="row mb-30">
+					<div class="col-5">
+						<h1 class="huge-title">Searching for lifeline</h1>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-1.jpg">
+								<div class="label-block">
+									<div class="image-label">UK election fallout</div>
+								</div>
+							</div>
+							<h3 class="title">
+								Militants take control of Afghanistan's second-largest city during unrelenting sweep of country, just weeks before US troops are due to complete withdrawal
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">US and UK sending troops to Afghanistan to aid evacuations</a></li>
+								<li><a href="#">Reporter presses Pentagon spokesperson on mission</a></li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="col">
+						<article class="mb-30"> <!-- margin-bottom -->
+							<div class="image-block">
+								<img src="img/articles/article-2.jpg" alt="">
+							</div>
+							<h3 class="title-over">Engine part rps off passenger jet after take off</h3>
+						</article>
+
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-3.jpg" alt="">
+							</div>
+							<h3 class="title-over">Trump crashes New Jersy wedding</h3>
+						</article>
+					</div>
+
+					<div class="col">
+						<div class="category-news">
+							Top stories
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-4.jpg">
+							</div>
+							<h3 class="title-middle">
+								Beijing has denied taking political hostages. Experts say fates of two Canadians suggest otherwise
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">Five dead and suspect killed after 'serious firearms incident' in England</a></li>
+								<li><a href="#">China issues new guidelines for face mask wearing amid Delta outbreak</a></li>
+								<li><a href="#">Every two days, US wildfires consume area the size of Washington, DC</a></li>
+								<li><a href="#">Disgraced K-pop star Seungri gets 3 years in jail on prostitution and gambling charges</a></li>
+								<li><a href="#">Britney Spears' father to step down as her conservator after months of public pressure</a></li>
+							</ul>
+						</article>
+					</div>
+				</section>
+
+				<!-- ROW 2 -->
+				<section class="row mb-30">
+					<div class="col">
+						<div class="category-news">
+							News and buzz
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-5.jpg">
+							</div>
+							<h3 class="title-middle">
+								Prince Andrew civil suit has wider implications for royal family
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+								<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+								<li><a href="#">China growth forecasts slashed</a></li>
+								<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+								<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+							</ul>
+						</article>
+					</div>
+
+					
+					<div class="col-5">
+						<div class="category-news">
+							Featured
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-6.jpg">
+								<div class="label-block">
+									<div class="image-label">ONE YEAR ON</div>
+									<h3 class="title-full-width">
+										Hovercrafts were the future of transport, then it all went sideways
+									</h3>
+								</div>
+							</div>
+							
+							<!-- Lastest image news -->
+							<article>
+								<div class="row">
+									<div class="col-5">
+										<img src="img/articles/article-7.jpg">
+									</div>
+									<div class="col-7 no-pl">
+										<h3 class=" no-margin title-middle">Vaccine mandates for :)) workers could become</h3>
+									</div>
+								</div>
+							</article>
+
+							<article class="border-top">
+								<div class="row">
+									<div class="col-5">
+										<img src="img/articles/article-8.jpg">
+									</div>
+									<div class="col-7 no-pl">
+										<h3 class="no-margin title-middle">Vaccine mandates workers could become the new</h3>
+									</div>
+								</div>
+							</article>
+						</article>
+					</div>
+					<div class="col">
+						<div class="category-news">
+							Spotlight
+						</div>
+						<article>
+							<div class="row">
+								<div class="col-4">
+									<img class="h-50" src="img/articles/article-9.jpg">
+								</div>
+								<div class="col-8 no-pl">
+									<h3 class="">Vaccine mandates for :)) workers could become</h3>
+								</div>
+							</div>
+						</article>
+
+						<article class="border-top">
+							<div class="row">
+								<div class="col-4">
+									<img class="h-50" src="img/articles/article-10.jpg">
+								</div>
+								<div class="col-8 no-pl">
+									<h3 class="">Vaccine mandates workers could become the new</h3>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+
+				<!-- ROW 3 -->
+				<session class="row mb-30">
+					<!-- ROW 3.1 -->
+					<div class="col">
+						<div class="category-news">
+							Around the world
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-11.jpg">
+							</div>
+							<h3 class="title-middle">
+								Prince Andrew civil suit has wider implications for royal family
+							</h3>
+						</article>
+						<article class="border-top">
+							<div class="row">
+								<div class="col-4">
+									<img class="h-50" src="img/articles/article-12.jpg">
+								</div>
+								<div class="col-8 no-pl">
+									<h3 class="">Vaccine mandates for :)) workers could become</h3>
+								</div>
+							</div>
+						</article>
+						<article class="border-top">
+							<div class="row">
+								<div class="col-4">
+									<img class="h-50" src="img/articles/article-13.jpg">
+								</div>
+								<div class="col-8 no-pl">
+									<h3 class="">Vaccine mandates workers could become the new</h3>
+								</div>
+							</div>
+						</article>
+						<article class="border-top">
+							<div class="row">
+								<div class="col-4">
+									<img class="h-50" src="img/articles/article-14.jpg">
+								</div>
+								<div class="col-8 no-pl">
+									<h3 class="">Vaccine mandates workers could become the new</h3>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<!-- ROW 3.2 -->
+					<div class="col-5">
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-15.jpg">
+								<div class="label-block">
+									<h3 class="title-full-width">
+										Hovercrafts were the future of transport, then it all went sideways
+									</h3>
+								</div>
+							</div>
+							
+							<!-- Lastest image news -->
+							<article>
+								<div class="row">
+									<div class="col-5">
+										<img src="img/articles/article-16.jpg">
+									</div>
+									<div class="col-7 no-pl">
+										<h3 class=" no-margin title-middle">Vaccine mandates for :)) workers could become</h3>
+									</div>
+								</div>
+							</article>
+
+							<article class="border-top">
+								<div class="row">
+									<div class="col-5">
+										<img src="img/articles/article-17.jpg">
+									</div>
+									<div class="col-7 no-pl">
+										<h3 class="no-margin title-middle">Vaccine mandates workers could become the new</h3>
+									</div>
+								</div>
+							</article>
+						</article>
+					</div>
+					<!-- END ROW 3.2 -->
+
+					<!-- ROW 3.3 -->
+					<div class="col">
+						<div class="col">
+							<div class="category-news">
+								Opinion
+							</div>
+							<article>
+								<div class="image-block">
+									<img src="img/articles/article-18.jpg">
+								</div>
+								<h3 class="title-middle">
+									Andrew civil suit has wider implications for royal family
+								</h3>
+							</article>
+							<article class="border-top">
+								<div class="row">
+									<div class="col-4">
+										<img class="h-50" src="img/articles/article-19.jpg">
+									</div>
+									<div class="col-8 no-pl">
+										<h3><span class="bold">Oma seddiq: </span> mandates for :)) workers could become</h3>
+									</div>
+								</div>
+							</article>
+							<article class="border-top">
+								<div class="row">
+									<div class="col-4">
+										<img class="h-50" src="img/articles/article-20.jpg">
+									</div>
+									<div class="col-8 no-pl">
+										<h3><span class="bold">Laura Beers: </span> mandates workers could become the new</h3>
+									</div>
+								</div>
+							</article>
+							<article class="border-top">
+								<div class="row">
+									<div class="col-4">
+										<img class="h-50" src="img/articles/article-21.jpg">
+									</div>
+									<div class="col-8 no-pl">
+										<h3><span class="bold">Mandates workers: </span> could become the new</h3>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</session>
+
+				<h3 class="featured-sections mb-15">Featured Sestions</h3>
+
+				<!-- ROW 4 -->
+				<section class="row mb-30">
+					<div class="col-4">
+						<div class="category-news">
+							News and buzz
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-22.jpg">
+							</div>
+							<h3 class="title-middle">
+								Prince Andrew civil suit has wider implications for royal family
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+								<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+								<li><a href="#">China growth forecasts slashed</a></li>
+								<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+								<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="col-4">
+						<div class="category-news">
+							News and buzz
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-23.jpg">
+							</div>
+							<h3 class="title-middle">
+								Prince Andrew civil suit has wider implications for royal family
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+								<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+								<li><a href="#">China growth forecasts slashed</a></li>
+								<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+								<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+							</ul>
+						</article>
+					</div>
+					<div class="col-4">
+						<div class="category-news">
+							News and buzz
+						</div>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-24.jpg">
+							</div>
+							<h3 class="title-middle">
+								Prince Andrew civil suit has wider implications for royal family
+							</h3>
+							<ul class="lastest-news">
+								<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+								<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+								<li><a href="#">China growth forecasts slashed</a></li>
+								<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+								<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+							</ul>
+						</article>
+					</div>
+				</section>
+				<!-- END ROW 4 -->
+
+				<!-- ROW 5 -->
+					<div class="row">
+						<div class="col-4">
+							<div class="category-news">
+								News and buzz
+							</div>
+							<article>
+								<div class="image-block">
+									<img src="img/articles/article-25.jpg">
+								</div>
+								<h3 class="title-middle">
+									Prince Andrew civil suit has wider implications for royal family
+								</h3>
+								<ul class="lastest-news">
+									<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+									<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+									<li><a href="#">China growth forecasts slashed</a></li>
+									<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+									<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+								</ul>
+							</article>
+						</div>
+						<div class="col-4">
+							<div class="category-news">
+								News and buzz
+							</div>
+							<article>
+								<div class="image-block">
+									<img src="img/articles/article-26.jpg">
+								</div>
+								<h3 class="title-middle">
+									Prince Andrew civil suit has wider implications for royal family
+								</h3>
+								<ul class="lastest-news">
+									<li><a href="#">What happened on board JetBlue's first NY-London flight</a></li>
+									<li><a href="#">Olympic silver medalist suspended for doping</a></li>
+									<li><a href="#">China growth forecasts slashed</a></li>
+									<li><a href="#">Amazon shifts 'Lord of the Rings' production</a></li>
+									<li><a href="#">Lizzo and Cardi B drop 'Rumors' video</a></li>
+								</ul>
+							</article>
+						</div>
+					</div>
+				</section>
+				<!-- END ROW 5 -->
+			</div>
+		</div>
+
+		<div class="dark-section">
+			<div class="wrapper">
+				<h3 class="featured-sections mb-15">Featured Sections</h3>
+				<div class="row">
+					<div class="col-9">
+						<div class="image-block">
+							<img src="img/articles/article-27.jpg">
+							<div class="label-block">
+								<div class="image-label">CNN EXCLUSIVE</div>
+								<h3 class="title-full-width">
+									Hovercrafts were the future of transport
+								</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-28.jpg">
+							</div>
+							<h3 class="title-middle no-margin">
+								Beijing has denied taking political 
+							</h3>
+							
+						</article>
+						<article>
+							<div class="image-block">
+								<img src="img/articles/article-29.jpg">
+							</div>
+							<h3 class="title-middle no-margin">
+								Experts say fates of two Canadians suggest otherwise
+							</h3>
+						</article>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>		
+	</main>
+
+	<footer class="page-footer">
+		<div class="wrapper">
+			<div class="footer-top-block">
+				<div class="footer-weather">
+					<p>London, United Kingdom</p>
+					<img src="img/weather-icon.png" alt="London, United Kingdom">
+					<div class="temperature">16°</div>
+				</div>
+		
+				<div class="footer-search-block">
+					<input type="search" placeholder="Search CNN...">
+					<label><i class="fas fa-search"></i></label>
+				</div>
+			</div>
+
+			<!-- footer-bottom-block -->
+			<div class="expanded-menu-block-top">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Regions</h3>
+								<ul>
+									<li><a href="">U.S.</a></li>
+									<li><a href="">Africa</a></li>
+									<li><a href="">Americas</a></li>
+									<li><a href="">Asia</a></li>
+									<li><a href="">China</a></li>
+									<li><a href="">Europe</a></li>
+									<li><a href="">Middle East</a></li>
+									<li><a href="">Opinion</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>U.S. Politics</h3>
+								<ul>
+									<li><a href="">45</a></li>
+									<li><a href="">Congress</a></li>
+									<li><a href="">Security</a></li>
+									<li><a href="">The Nine</a></li>
+									<li><a href="">Trumpmerica</a></li>
+									<li><a href="">State</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Money</h3>
+								<ul>
+									<li><a href="">Business</a></li>
+									<li><a href="">Markets</a></li>
+									<li><a href="">Tech</a></li>
+									<li><a href="">Luxury</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>entertainment</h3>
+								<ul>
+									<li><a href="">Stars</a></li>
+									<li><a href="">Screen</a></li>
+									<li><a href="">Binge</a></li>
+									<li><a href="">Culture</a></li>
+									<li><a href="">Media</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>tech</h3>
+								<ul>
+									<li><a href="">Business</a></li>
+									<li><a href="">Culture</a></li>
+									<li><a href="">Gadgets</a></li>
+									<li><a href="">Future</a></li>
+									<li><a href="">Startups</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Sport</h3>
+								<ul>
+									<li><a href="">Football</a></li>
+									<li><a href="">Golf</a></li>
+									<li><a href="">Tennis</a></li>
+									<li><a href="">Motorsport</a></li>
+									<li><a href="">Horseracing</a></li>
+									<li><a href="">Equestrian</a></li>
+									<li><a href="">Sailing</a></li>
+									<li><a href="">Skiing</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Travel</h3>
+								<ul>
+									<li><a href="">Aviation</a></li>
+									<li><a href="">Business Traveller</a></li>
+									<li><a href="">Destinations</a></li>
+									<li><a href="">Features</a></li>
+									<li><a href="">Food/Drink</a></li>
+									<li><a href="">Hotels</a></li>
+									<li><a href="">Partner Hotels</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>STYLE</h3>
+								<ul>
+									<li><a href="">Fashion</a></li>
+									<li><a href="">Design</a></li>
+									<li><a href="">Architecture</a></li>
+									<li><a href="">Arts</a></li>
+									<li><a href="">Autos</a></li>
+									<li><a href="">Luxury</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Health</h3>
+								<ul>
+									<li><a href="">Diet + Fitness</a></li>
+									<li><a href="">Living Well</a></li>
+									<li><a href="">Parenting + Family</a></li>
+									<li><a href="">Vital Signs</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Features</h3>
+								<ul>
+									<li><a href="">Freedom Project</a></li>
+									<li><a href="">Impact Your World</a></li>
+									<li><a href="">Inside Africa</a></li>
+									<li><a href="">2 degrees</a></li>
+									<li><a href="">All Features</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Video</h3>
+								<ul>
+									<li><a href="">Video news</a></li>
+									<li><a href="">Feature shows</a></li>
+									<li><a href="">HLN</a></li>
+									<li><a href="">TV shows</a></li>
+									<li><a href="">TV schedule</a></li>
+									<li><a href="">Faces of CNN Worldwide</a></li>
+									<li><a href="">CNNVR</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="expanded-col">
+								<h3>Sport</h3>
+								<ul>
+									<li><a href="">Football</a></li>
+									<li><a href="">Golf</a></li>
+									<li><a href="">Tennis</a></li>
+									<li><a href="">Motorsport</a></li>
+									<li><a href="">Horseracing</a></li>
+									<li><a href="">Equestrian</a></li>
+									<li><a href="">Sailing</a></li>
+									<li><a href="">Skiing</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- copy -->
+		</div>
+	</footer>
+</body>
+</html>
